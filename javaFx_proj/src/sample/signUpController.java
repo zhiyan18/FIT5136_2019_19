@@ -35,6 +35,21 @@ public class signUpController {
 
     @FXML
     public void signUpBtnEvent(javafx.event.ActionEvent actionEvent) {
-        System.out.println("sign up successfully !");
+        String name = userName.getText();
+        if (!passWord.getText().equals(rePassWord.getText())) {
+            System.out.println("pass word repeat mistake !");
+        }
+        else if(FileIO.accountExist(name))
+        {
+            System.out.println("this user name has existed !");
+        }
+        else if(name.length()<4)
+        {
+            System.out.println("user name must be larger than 3 characters");
+        }
+        else{
+              FileIO.register(name,passWord.getText(),phoneNo.getText(),homeAdd.getText(),postCode.getText());
+            System.out.println("sign up successfully !");
+        }
     }
 }

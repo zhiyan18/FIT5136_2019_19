@@ -6,3 +6,12 @@
     -fx-background-image: url("search-icon.png");
     -fx-background-size: cover;
 }
+
+.inputContent{
+    -fx-prompt-text-fill: rgba(70, 80, 88, 0.71);
+    -fx-text-fill: black;
+ }
+.inputContent:focused{
+    -fx-border-color: #6ED9A0;
+    -fx-text-fill: black;
+}
