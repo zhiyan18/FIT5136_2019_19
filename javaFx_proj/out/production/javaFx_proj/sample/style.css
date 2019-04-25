@@ -1,0 +1,8 @@
+/*.root{
+    -fx-background-image: url("strawberries.jpg");
+    -fx-background-size: cover;
+}*/
+.searchIcon{
+    -fx-background-image: url("search-icon.png");
+    -fx-background-size: cover;
+}
