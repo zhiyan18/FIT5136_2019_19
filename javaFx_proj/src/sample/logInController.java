@@ -1,5 +1,4 @@
 package sample;
-import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,12 +10,14 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
-import javax.print.DocFlavor;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public class logInController implements Initializable {
     @FXML
@@ -45,10 +46,24 @@ public class logInController implements Initializable {
     @FXML
     public void logInBtnAction(ActionEvent e)
     {
-            System.out.println("log in successfully");
+        String name = userName.getText()    ;
+        String pw = passWord.getText();
+        if(!FileIO.accountExist(name))
+        {
+            System.out.println("this account is not exist!");
+        }
+        else if(!FileIO.pwCorrect(name,pw))
+        {
+            System.out.println("password wrong!");
+        }
+        else
+        System.out.println(name+" log in successfully");
     }
+
+
+
     @FXML
-    public void signUpAction(ActionEvent e1) throws IOException {
+    private void signUpAction(ActionEvent e1) throws IOException {
         signUpBtn.getScene().getWindow().hide();
         Stage signup = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("signUp.fxml"));
