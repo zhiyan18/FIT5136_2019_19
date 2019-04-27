@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="600" prefWidth="400" style="-fx-background-color: #F68A1E;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.logInController">
    <children>
-      <Text fx:id="title" fill="#f8f8f8" layoutX="25.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MonashEats" textAlignment="CENTER">
+      <Text fx:id="title" fill="#f8f8f8" layoutX="25.0" layoutY="79.0" onTouchReleased="#homeAction" strokeType="OUTSIDE" strokeWidth="0.0" text="MonashEats" textAlignment="CENTER">
          <font>
             <Font name="Bauhaus 93" size="34.0" />
          </font>
@@ -20,5 +20,6 @@
       <Button fx:id="logInBtn" layoutX="138.0" layoutY="377.0" mnemonicParsing="false" onAction="#logInBtnAction" prefHeight="32.0" prefWidth="119.0" text="log in" />
       <Button fx:id="signUpBtn" layoutX="138.0" layoutY="443.0" mnemonicParsing="false" onAction="#signUpAction" prefHeight="32.0" prefWidth="119.0" text="sign Up" />
       <PasswordField fx:id="passWord" layoutX="92.0" layoutY="231.0" prefHeight="32.0" prefWidth="211.0" promptText="password" styleClass="inputContent" stylesheets="@style.css" />
+      <Button fx:id="homeButton" layoutX="25.0" layoutY="52.0" mnemonicParsing="false" onAction="#homeAction" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>

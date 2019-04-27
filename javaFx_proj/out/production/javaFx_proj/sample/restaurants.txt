@@ -1,0 +1,5 @@
+[{"name":"McDonalds","distance":"2","rating":"4.5"},
+ {"name":"LittleSpicy","distance":"1","rating":"2.5"},
+ {"name":"KimChi","distance":"0.5","rating":"4.2"},
+ {"name":"StarBucks","distance":"4","rating":"3"},
+ {"name":"Subway","distance":"1.5","rating":"3.1"}]
