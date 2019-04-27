@@ -20,6 +20,17 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class logInController implements Initializable {
+    private static logInController instance;
+    private static String curUserName = "";
+ public logInController()
+ {
+     instance = this;
+ }
+ public static String getUserName()
+ {
+     return curUserName;
+ }
+
     @FXML
     private Text title;
 
@@ -38,6 +49,8 @@ public class logInController implements Initializable {
     @FXML
     private Button signUpBtn;
 
+    @FXML
+    private Button homeButton;
     @Override
     public void initialize(URL arg0, ResourceBundle arg1){
         userName.setStyle("-fx-text-inner-color: #a0a2ab");
@@ -57,7 +70,10 @@ public class logInController implements Initializable {
             System.out.println("password wrong!");
         }
         else
-        System.out.println(name+" log in successfully");
+        {
+            System.out.println(name+" log in successfully");
+            curUserName = name;
+        }
     }
 
 
@@ -71,6 +87,17 @@ public class logInController implements Initializable {
         signup.setScene(scene);
         signup.show();
         signup.setResizable(false);
+    }
+
+    @FXML
+    public void homeAction(ActionEvent e) throws IOException {
+       homeButton .getScene().getWindow().hide();
+        Stage  home= new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Scene scene = new Scene(root);
+        home.setScene(scene);
+        home.show();
+        home.setResizable(false);
     }
 
     }
