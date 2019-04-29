@@ -70,25 +70,81 @@ static final String accountFile = "src\\sample\\userAccounts.txt";
         writeFile(line);
     }
 
-    public static String getRestName()
+    public static String getRestInfo(String key,int i)
     {
-        String names = "";
+        String result = "";
 
         try {
             JSONArray restList = new JSONArray(readFile(restaurantFile));
-            int i = 0;
-            while (i<restList.length())
+            if (i<restList.length())
             {
-               names += restList.getJSONObject(i).getString("name")+"\n";
-               i++;
+               result = restList.getJSONObject(i).getString(key);
+
+            }
+            else
+                result = "";
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+         return result;
+    }
+
+    public static String getRestMenu(String restName)
+    {
+        String allFoodName = "";
+        try {
+            JSONArray restList = new JSONArray(readFile(restaurantFile));
+            int i=0;
+            while(i<restList.length())
+            {
+                if(getRestInfo("name",i).equals(restName))
+                {
+                   JSONArray menuArr = restList.getJSONObject(i).getJSONArray("menu");
+                   int j =0;
+                   while(j<menuArr.length()) {
+                       allFoodName += menuArr.getJSONObject(j).getString("foodName") + "\n";
+                       j++;
+                   }
+                   break;
+                }
+                i++;
             }
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
-         return names;
+        return allFoodName;
     }
 
+    public static String[] getAllRestName()
+    {
+        String result ="";
+        int i = 0;
+
+        while(!getRestInfo("name",i).equals(""))
+        {
+           result += getRestInfo("name",i) +"\n";
+           i++;
+        }
+
+        return result.split("\n");
+    }
+
+    public String[] getAllFoodName()
+    {
+        String result ="";
+        int i = 0;
+
+        while(!getRestInfo("food",i).equals(""))
+        {
+            result += getRestInfo("name",i) +"\n";
+            i++;
+        }
+
+        return result.split("\n");
+
+    }
 
     }
 
