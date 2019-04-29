@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
@@ -24,6 +25,7 @@ public class Controller implements Initializable {
 
 
     private String userName = "";
+    private static String restSelect ="";
     @FXML
     private TextField searchBar;
 
@@ -66,6 +68,10 @@ public class Controller implements Initializable {
 
     @FXML
     private Button restaurant5;
+
+    @FXML
+    private VBox buttonBox;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -81,7 +87,8 @@ public class Controller implements Initializable {
             botButtons.setVisible(false);
         }
         Button[] restButtons = {restaurant1, restaurant2, restaurant3,restaurant4,restaurant5};
-        String[] names = FileIO.getRestName().split("\n");
+        String[] names =FileIO.getAllRestName();
+
         Arrays.sort(names);
         int i = 0;
         while (i < restButtons.length && i < names.length) {
@@ -100,4 +107,71 @@ public class Controller implements Initializable {
         signup.show();
         signup.setResizable(false);
     }
+
+    public static String getRestSelect()
+    {
+        return restSelect;
+    }
+    @FXML
+    public void menuActionB1(ActionEvent e) throws IOException {
+        restSelect = restaurant1.getText();
+        restaurant1.getScene().getWindow().hide();
+        Stage menu = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        Scene scene = new Scene(root);
+        menu.setScene(scene);
+        menu.show();
+        menu.setResizable(false);
+    }
+
+
+
+    @FXML
+    public void menuActionB3(ActionEvent e) throws IOException {
+        restSelect = restaurant3.getText();
+        restaurant3.getScene().getWindow().hide();
+        Stage menu = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        Scene scene = new Scene(root);
+        menu.setScene(scene);
+        menu.show();
+        menu.setResizable(false);
+    }
+
+    @FXML
+    public void menuActionB2(ActionEvent e) throws IOException {
+        restSelect = restaurant2.getText();
+        restaurant2.getScene().getWindow().hide();
+        Stage menu = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        Scene scene = new Scene(root);
+        menu.setScene(scene);
+        menu.show();
+        menu.setResizable(false);
+    }
+
+    @FXML
+    public void menuActionB4(ActionEvent e) throws IOException {
+        restSelect = restaurant4.getText();
+        restaurant4.getScene().getWindow().hide();
+        Stage menu = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        Scene scene = new Scene(root);
+        menu.setScene(scene);
+        menu.show();
+        menu.setResizable(false);
+    }
+
+    @FXML
+    public void menuActionB5(ActionEvent e) throws IOException {
+        restSelect = restaurant5.getText();
+        restaurant5.getScene().getWindow().hide();
+        Stage menu = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+        Scene scene = new Scene(root);
+        menu.setScene(scene);
+        menu.show();
+        menu.setResizable(false);
+    }
+
 }
