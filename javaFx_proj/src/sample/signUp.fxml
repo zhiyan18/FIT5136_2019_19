@@ -15,10 +15,11 @@
          </font>
       </Text>
       <TextField fx:id="userName" layoutX="95.0" layoutY="120.0" prefHeight="32.0" prefWidth="211.0" promptText="User Name" styleClass="inputContent" stylesheets="@style.css" />
+      <TextField fx:id="email" layoutX="95.0" layoutY="168.0" prefHeight="32.0" prefWidth="211.0" promptText="Email" />
       <Button fx:id="signUpBtn" layoutX="141.0" layoutY="485.0" mnemonicParsing="false" onAction="#signUpBtnEvent" prefHeight="32.0" prefWidth="119.0" text="sign Up" />
-      <TextField fx:id="phoneNo" layoutX="95.0" layoutY="180.0" prefHeight="32.0" prefWidth="211.0" promptText="Phone number" styleClass="inputContent" stylesheets="@style.css" />
-      <TextField fx:id="homeAdd" layoutX="95.0" layoutY="231.0" prefHeight="32.0" prefWidth="211.0" promptText="Home Address" styleClass="inputContent" stylesheets="@style.css" />
-      <TextField fx:id="postCode" layoutX="95.0" layoutY="284.0" prefHeight="32.0" prefWidth="211.0" promptText="Post Code" styleClass="inputContent" stylesheets="@style.css" />
+      <TextField fx:id="phoneNo" layoutX="96.0" layoutY="220.0" prefHeight="32.0" prefWidth="211.0" promptText="Phone number" styleClass="inputContent" stylesheets="@style.css" />
+      <TextField fx:id="homeAdd" layoutX="96.0" layoutY="261.0" prefHeight="32.0" prefWidth="211.0" promptText="Home Address" styleClass="inputContent" stylesheets="@style.css" />
+      <TextField fx:id="postCode" layoutX="95.0" layoutY="300.0" prefHeight="32.0" prefWidth="211.0" promptText="Post Code" styleClass="inputContent" stylesheets="@style.css" />
       <PasswordField fx:id="passWord" layoutX="95.0" layoutY="352.0" prefHeight="32.0" prefWidth="211.0" promptText="Password" styleClass="inputContent" stylesheets="@style.css" />
       <PasswordField fx:id="rePassWord" layoutX="95.0" layoutY="400.0" prefHeight="32.0" prefWidth="211.0" promptText="Repeat Password" styleClass="inputContent" stylesheets="@style.css" />
       <Button fx:id="homeButton" layoutX="25.0" layoutY="55.0" mnemonicParsing="false" onAction="#homeAction" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: transparent;" />

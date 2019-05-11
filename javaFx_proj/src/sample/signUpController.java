@@ -21,6 +21,8 @@ public class signUpController {
     private TextField userName;
 
     @FXML
+    private TextField email;
+    @FXML
     private TextField passWord;
 
     @FXML
@@ -55,8 +57,12 @@ public class signUpController {
         {
             System.out.println("user name must be larger than 3 characters");
         }
+        else if(email.getText().isEmpty())
+        {
+            System.out.println("email required!");
+        }
         else{
-              FileIO.register(name,passWord.getText(),phoneNo.getText(),homeAdd.getText(),postCode.getText());
+              FileIO.register(name,passWord.getText(),phoneNo.getText(),homeAdd.getText(),postCode.getText(),email.getText());
             System.out.println("sign up successfully !");
         }
     }
