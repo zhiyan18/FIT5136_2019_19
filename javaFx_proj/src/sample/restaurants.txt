@@ -1,21 +1,27 @@
 [{"name":"McDonalds","distance":"2","rating":"4.5","menu":[
 {"foodName":"fries chicken","price":"5","foodRating":"3"},
-{"foodName":"beefHamburg","price":"12","foodRating":"4.1"}]
+{"foodName":"beefHamburg","price":"12","foodRating":"4.1"},
+{"foodName":"bacon Angus","price":"11.3","foodRating":"4.0"}
+]
 },
  {"name":"LittleSpicy","distance":"1","rating":"2.5","menu":[
   {"foodName":"hot pot","price":"8","foodRating":"4"},
-  {"foodName":"braised pork","price":"15","foodRating":"4.3"}
+  {"foodName":"braised pork","price":"15","foodRating":"4.3"},
+  {"foodName":"dumplings","price":"10.5","foodRating":"3.2"}
   ]},
  {"name":"KimChi","distance":"0.5","rating":"4.2","menu":[
- {"foodName":"beef sizzle","price":"10","foodRating":"3.8"},
- {"foodName":"tofu pot","price":"9","foodRating":"4.2"}
+ {"foodName":"beef sizzling","price":"10","foodRating":"3.8"},
+ {"foodName":"tofu pot","price":"9","foodRating":"4.2"},
+ {"foodName":"pork BBQ","price":"16","foodRating":"4.3"}
  ]},
  {"name":"StarBucks","distance":"4","rating":"3","menu":[
  {"foodName":"latte","price":"5","foodRating":"3.1"},
- {"foodName":"Americano","price":"3","foodRating":"2.8"}
+ {"foodName":"Americano","price":"3","foodRating":"2.8"},
+ {"foodName":"longBlack","price":"2.5","foodRating":"3.8"}
   ]},
  {"name":"Subway","distance":"1.5","rating":"3.1","menu":[
  {"foodName":"loaf bread","price":"12","foodRating":"4"},
- {"foodName":"taco","price":"6","foodRating":"3.3"}
+ {"foodName":"taco","price":"6","foodRating":"3.3"},
+ {"foodName":"half bread","price":"8.5","foodRating":"4.1"}
  ]}
  ]
